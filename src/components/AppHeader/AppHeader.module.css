@@ -1,0 +1,44 @@
+.navContainer {
+  width: 100%;
+  height: 80px;
+  background-color: #0089b7;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navItems {
+  display: flex;
+  gap: 20px;
+}
+.navItems div:hover {
+  cursor: pointer;
+  color: yellow;
+}
+.hamburgur {
+  display: none;
+}
+input[type="checkbox"] {
+  display: none;
+}
+@media screen and (max-width:500px) {
+  .hamburgur {
+    display: block;
+    font-size: 25px;
+  }
+  .navItems{
+    display: none;
+  }
+  input[type="checkbox"]:checked~ .navItems {
+    position: absolute;
+    top: 80px;
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #0089b7;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+  }
+}
